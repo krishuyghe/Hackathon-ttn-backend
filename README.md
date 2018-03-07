@@ -1,9 +1,9 @@
 # TTN Listener 
 
 ## inleiding
-connect to the mqtt of TTN, cleans up data. (remove metadata)
-
-Sensor sends data to the TT Networks, in the 
+The sensor sends data to the TTN, the TTN wil be filtered and generate a JSON String.
+This Json String will send with the integrated MQTT of The things network to the listener (this project).
+This Json string wil send all the incoming data filtered to the HTTP
 
 ![map](/pictures/map.png)
 
