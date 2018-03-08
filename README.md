@@ -8,6 +8,12 @@ This Json string wil send all the incoming data filtered to the HTTP
 
 ![map](/pictures/map.png)
 
+## installation
+
+`npm install`
+
+`node server.js`
+
 ## agendapunten
 
 SIMULATIE => HTTP
