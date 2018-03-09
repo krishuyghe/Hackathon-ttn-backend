@@ -88,3 +88,4 @@ you need to collect only the payload_raw data.
 # referenties
 
 https://github.com/TheThingsNetwork/node-app-sdk/blob/master/examples/es5/data.js
+https://www.twilio.com/blog/2017/08/http-requests-in-node-js.html
