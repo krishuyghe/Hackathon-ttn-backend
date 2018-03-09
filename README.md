@@ -8,6 +8,23 @@ This Json string wil send all the incoming data filtered to the HTTP
 
 ![map](/pictures/map.png)
 
+## Installation
+
+`git clone git@github.com:Projectwerk2-2018/smart-campus-ttn-backend.git`
+
+Installing the dependencies:
+
+`npm install`
+
+
+## Running the application
+
+`node server.js`
+
+or
+
+`npm start`
+
 ## agendapunten
 
 SIMULATIE => HTTP

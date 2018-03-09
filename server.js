@@ -6,7 +6,7 @@
 var settings = require("./settings.json");
 var ttn = require("ttn");
 
-var appID = settings.ttn.appID;
+var appID = settings.ttn.appId;
 var accessKey = settings.ttn.accessKey;
 
 ttn

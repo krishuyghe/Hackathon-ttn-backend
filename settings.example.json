@@ -1,0 +1,6 @@
+{
+	  "ttn":{
+    		"appId": "you-app-id",
+    		"accessKey": "your-access-key"
+		}
+}
