@@ -14,6 +14,10 @@ This Json string wil send all the incoming data filtered to the HTTP
 
 `node server.js`
 
+## werking 
+
+https://spring.io/guides/gs/consuming-rest-jquery/
+
 ## agendapunten
 
 SIMULATIE => HTTP
