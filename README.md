@@ -16,6 +16,22 @@ Installing the dependencies:
 
 `npm install`
 
+## Configuration
+
+Make a copy of the `settings.example.json` file and name it `settings.json`. This can be done with the following command as well: `cp settings.example.json settings.json`.
+
+Then update the changes in the file according to your setup.
+
+```javascript
+{
+	  "ttn":{
+    		"appId": "you-app-id",
+    		"accessKey": "your-access-key"
+		}
+}
+```
+
+
 
 ## Running the application
 
