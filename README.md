@@ -8,16 +8,6 @@ This Json string wil send all the incoming data filtered to the HTTP
 
 ![map](/pictures/map.png)
 
-## installation
-
-`npm install`
-
-`node server.js`
-
-## werking 
-
-https://spring.io/guides/gs/consuming-rest-jquery/
-
 ## agendapunten
 
 SIMULATIE => HTTP

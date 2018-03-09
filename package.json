@@ -4,18 +4,13 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Sybren Maréchal <sybren.marechal@student.vives.be>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.16.2",
-    "mongoose": "^5.0.9",
     "request": "^2.80.0",
     "ttn": "^2.1.0"
-  },
-  "devDependencies": {
-    "nodemon": "^1.17.1"
   }
 }
