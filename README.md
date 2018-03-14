@@ -6,7 +6,7 @@ The sensor sends data to the TTN, the TTN wil be filtered and generate a JSON St
 This Json String will send with the integrated MQTT of The things network to the listener (this project).
 This Json string wil send all the incoming data filtered to the HTTP
 
-![map](/pictures/map.jpg)
+![map](/pictures/roadmap.jpg)
 
 ## Installation
 
@@ -24,14 +24,18 @@ Then update the changes in the file according to your setup.
 
 ```javascript
 {
-	  "ttn":{
-    		"appId": "you-app-id",
-    		"accessKey": "your-access-key"
-		}
-}
+	"ttn":{
+		  "appId": "TEST",
+		  "accessKey": "ttn-account-v2.TEST"
+	  },
+	  "http":{
+			  "host": "localhost",
+			  "port": 8000,
+			  "path": "/"
+	  }
+} 
+
 ```
-
-
 
 ## Running the application
 
@@ -40,6 +44,19 @@ Then update the changes in the file according to your setup.
 or
 
 `npm start`
+
+## testing the application
+set the localhost_test.js file in a new project.
+
+run the project
+
+`node localhost_test.js`
+
+if the hardware is online you will have automaticly respons 
+
+other whise you can *simulate uplink*
+
+test with payload `00D71B0049`
 
 ## agendapunten
 

@@ -6,8 +6,8 @@ http.createServer(function (req, res) {
     res.write(req.url);
    // console.log(req.body.toString());
     res.end();
-    console.log("data van de url")
-    console.log(req.url);
+    //console.log("data van de url")
+    //console.log(req.url);
 
 
 
