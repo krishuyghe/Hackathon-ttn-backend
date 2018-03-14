@@ -11,6 +11,7 @@ var request = require("request");
 var appID = settings.ttn.appId;
 var accessKey = settings.ttn.accessKey;
 
+
 ttn
   .data(appID, accessKey)
   .then(function(client) {
@@ -29,9 +30,14 @@ ttn
         json: true,
         body: payload.payload_fields
       };
+      request(options, function(err,res,body){
+        console.log('status: ' + res.statusCode);
+      });
     });
   })
   .catch(function(error) {
     console.error("Error", error);
     process.exit(1);
   });
+
+ 

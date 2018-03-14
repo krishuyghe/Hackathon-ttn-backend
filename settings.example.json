@@ -1,6 +1,11 @@
 {
-	  "ttn":{
-    		"appId": "you-app-id",
-    		"accessKey": "your-access-key"
-		}
-}
+	"ttn":{
+		  "appId": "TEST",
+		  "accessKey": "ttn-account-v2.TEST"
+	  },
+	  "http":{
+			  "host": "localhost",
+			  "port": 8000,
+			  "path": "/"
+	  }
+} 
