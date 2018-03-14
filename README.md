@@ -6,7 +6,7 @@ The sensor sends data to the TTN, the TTN wil be filtered and generate a JSON St
 This Json String will send with the integrated MQTT of The things network to the listener (this project).
 This Json string wil send all the incoming data filtered to the HTTP
 
-![map](/pictures/map.png)
+![map](/pictures/map.jpg)
 
 ## Installation
 
