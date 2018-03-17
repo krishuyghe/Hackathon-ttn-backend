@@ -3,14 +3,16 @@
 
 /* eslint-disable */
 
-var settings = require("./settings.json");
+// var settings = require("./settings.json");
 var ttn = require("ttn");
 var http = require("http");
 var request = require("request");
 
-var appID = settings.ttn.appId;
-var accessKey = settings.ttn.accessKey;
+var appID =  process.env.TTN_APPID;
+var accessKey =  process.env.TTN_ACCESSKEY;
 
+// var api_url = "http://" + settings.http.host + ":" + settings.http.port +  settings.http.path;
+var api_url = process.env.API_URL || "http://localhost:80/api"
 
 ttn
   .data(appID, accessKey)
@@ -24,8 +26,7 @@ ttn
       //console.log(my_payload);
 
       var options = {
-        url:
-          "http://" + settings.http.host + ":" + settings.http.port +  settings.http.path,
+        url: api_url,
         method: "POST",
         json: true,
         body: payload.payload_fields
