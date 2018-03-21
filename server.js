@@ -17,18 +17,22 @@ ttn
   .then(function(client) {
     client.on("uplink", function(devID, payload) {
       console.log("Received uplink from ", devID);
-      console.log(payload.payload_fields);
+      // console.log(payload.payload_fields);
+      // console.log(payload.hardware_serial);
+      
       console.log("Program running");
-      //my_payload = {};
-      //my_payload.temperature = payload.payload_fields.celcius;
-      //console.log(my_payload);
+
+      body = payload.payload_fields
+      body.dev_eui = payload.hardware_serial
+
+      console.log(JSON.stringify(body));
 
       var options = {
         url:
-          "http://" + settings.http.host + ":" + settings.http.port +  settings.http.path,
+          "https://" + settings.http.host + ":" + settings.http.port +  settings.http.path,
         method: "POST",
         json: true,
-        body: payload.payload_fields
+        body: body
       };
       request(options, function(err,res,body){
         console.log('status: ' + res.statusCode);
@@ -40,4 +44,3 @@ ttn
     process.exit(1);
   });
 
- 
