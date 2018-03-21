@@ -29,13 +29,16 @@ ttn
 
       var options = {
         url:
-          "https://" + settings.http.host + ":" + settings.http.port +  settings.http.path,
+        settings.http.http + "://" + settings.http.host + ":" + settings.http.port +  settings.http.path,
         method: "POST",
         json: true,
         body: body
       };
-      request(options, function(err,res,body){
-        console.log('status: ' + res.statusCode);
+      request(options, function (error, response, body) {
+        if (error) {
+          return console.error('upload failed:', error);
+        }
+        console.log('Upload successful!');
       });
     });
   })
