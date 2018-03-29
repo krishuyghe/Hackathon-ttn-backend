@@ -31,7 +31,8 @@ Then update the changes in the file according to your setup.
 	  "http":{
 			  "host": "localhost",
 			  "port": 8000,
-			  "path": "/"
+			  "path": "/",
+			  "http": "http"
 	  }
 } 
 
