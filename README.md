@@ -18,25 +18,23 @@ Installing the dependencies:
 
 ## Configuration
 
-Make a copy of the `settings.example.json` file and name it `settings.json`. This can be done with the following command as well: `cp settings.example.json settings.json`.
+Make a copy of the `.env.example` file and name it `.env`. This can be done with the following command as well: `cp .env.example .env`.
 
 Then update the changes in the file according to your setup.
 
-```javascript
-{
-	"ttn":{
-		  "appId": "TEST",
-		  "accessKey": "ttn-account-v2.TEST"
-	  },
-	  "http":{
-			  "host": "localhost",
-			  "port": 8000,
-			  "path": "/",
-			  "http": "http"
-	  }
-} 
+```bash
+TTN_APPID=
+TTN_ACCESSKEY=ttn-account-v2.
 
+HTTP_HOST=localhost
+HTTP_PORT=8000
+HTTP_PATH=/
+HTTP_HTTP=http
 ```
+
+Or you can change the setting in your terminal:
+
+`TTN_APPID=test TTN_ACCESSKEY=ttn-account-v2 HTTP_HOST... node server.js`
 
 ## Running the application
 
@@ -47,19 +45,21 @@ or
 `npm start`
 
 ## testing the application
+
 set the localhost_test.js file in a new project.
 
 run the project
 
 `node localhost_test.js`
 
-if the hardware is online you will have automaticly respons 
+if the hardware is online you will have automaticly respons
 
-other whise you can *simulate uplink*
+other whise you can _simulate uplink_
 
 test with payload `00D71B0049`
 
 ![payload](/pictures/payload.png)
 
-# referenties
+this wil send `{"humidity":109,"movement":125,"temperature":11.7,"dev_eui":"00D9E55A84BCE66B"}` to the Listiner. End to the backand
 
+# referenties

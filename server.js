@@ -2,14 +2,16 @@
 // Use of this source code is governed by the MIT license that can be found in the LICENSE file.
 
 /* eslint-disable */
+require('dotenv').config()
+console.log(process.env)
 
-var settings = require("./settings.json");
 var ttn = require("ttn");
 var http = require("http");
 var request = require("request");
 
-var appID = settings.ttn.appId;
-var accessKey = settings.ttn.accessKey;
+
+var appID = process.env.TTN_APPID;
+var accessKey = process.env.TTN_ACCESSKEY;
 
 
 ttn
@@ -17,9 +19,6 @@ ttn
   .then(function(client) {
     client.on("uplink", function(devID, payload) {
       console.log("Received uplink from ", devID);
-      // console.log(payload.payload_fields);
-      // console.log(payload.hardware_serial);
-      
       console.log("Program running");
 
       body = payload.payload_fields
@@ -29,7 +28,7 @@ ttn
 
       var options = {
         url:
-        settings.http.http + "://" + settings.http.host + ":" + settings.http.port +  settings.http.path,
+        process.env.HTTP_HTTP + "://" + process.env.HTTP_HOST + ":" + process.env.HTTP_PORT +  process.env.HTTP_PATH,
         method: "POST",
         json: true,
         body: body
