@@ -62,4 +62,19 @@ test with payload `00D71B0049`
 
 this wil send `{"humidity":109,"movement":125,"temperature":11.7,"dev_eui":"00D9E55A84BCE66B"}` to the Listiner. End to the backand
 
+# dockerizing 
+
+
+build your **Docker image**
+
+`docker build -t <name>/listener .`
+
+test of the images has been build
+
+`docker image ls`
+
+now you can run the application 
+
+`docker run -p 4000:80 <name>/listener`
+
 # referenties
